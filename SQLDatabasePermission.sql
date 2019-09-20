@@ -1,8 +1,10 @@
+
+
 -- The following SQL Script you can execute to grant specific permission to SQL so that SCOM can run the workflows. 
 -- You just need to replace the account name here : SET @accountname = 'domain\test';
 
 
---For SQL2017+, you need to run the below Script. This is when USer account is not created.
+--For SQL2017+, you need to run the below Script. This is when User account is not created.
 --#############################################################################################################################################
 
 SET NOCOUNT ON;
@@ -43,7 +45,7 @@ EXECUTE sp_executesql @command1;
 EXECUTE sp_executesql @command2;
 EXECUTE sp_executesql @command3;
 
-For (SQL2012 - SQL2016), you need to run the below Script. This is when USer account is not created.
+--For (SQL2012 - SQL2016), you need to run the below Script. This is when User account is not created.
 --#############################################################################################################################################
 
 SET NOCOUNT ON;
@@ -80,7 +82,7 @@ EXECUTE sp_executesql @command2;
 EXECUTE sp_executesql @command3;
 
 
---For SQL 2008, you need to run the below Script. This is when USer account is not created.
+--For SQL 2008, you need to run the below Script. This is when User account is not created.
 --#############################################################################################################################################
 
 SET NOCOUNT ON;
@@ -117,7 +119,7 @@ EXECUTE sp_executesql @command3;
 
 --If User account is already present, then you need to run the following:
 
---For SQL2017+, you need to run the below Script. This is when USer account is already created.
+--For SQL2017+, you need to run the below Script. This is when User account is already created.
 --#############################################################################################################################################
 
 SET NOCOUNT ON;
@@ -145,7 +147,7 @@ EXEC sp_addrolemember @rolename=''PolicyAdministratorRole'', @membername='''+@ac
 EXEC sp_addrolemember @rolename=''SQLAgentReaderRole'', @membername='''+@accountname+''';';
 EXECUTE sp_executesql @command3;
 
-For (SQL2012 - SQL2016), you need to run the below Script. This is when USer account is already created.
+--For (SQL2012 - SQL2016), you need to run the below Script. This is when User account is already created.
 --#############################################################################################################################################
 
 SET NOCOUNT ON;
@@ -163,7 +165,7 @@ EXEC sp_addrolemember @rolename=''SQLAgentReaderRole'', @membername='''+@account
 EXECUTE sp_executesql @command3;
 
 
---For SQL 2008, you need to run the below Script. This is when USer account is already created.
+--For SQL 2008, you need to run the below Script. This is when User account is already created.
 --#############################################################################################################################################
 
 SET NOCOUNT ON;
